@@ -20,7 +20,7 @@ const UpdateImage = () => {
     }, [meme.state.imageSelected]);
 
     // Methods
-    const handleLocalImage = (e) => {
+    const handleLocalImage = e => {
         const img = e.target.files[0];
         const newImage = {
             name: img.name,
@@ -39,12 +39,14 @@ const UpdateImage = () => {
         label = <ActiveImage />;
         caption = <ImageCaption />;
     } else {
-        label = <NoImage>Please upload an Image</NoImage>;
+        label = <NoImage>Upload an image from your computer</NoImage>;
     }
 
     return (
         <ImageWrapper>
-            <ImageLabel active={meme.state.imageSelected !== null}>{label}</ImageLabel>
+            <ImageLabel active={meme.state.imageSelected !== null}>
+                {label}
+            </ImageLabel>
             <ImageInput onChange={handleLocalImage} />
             {caption}
         </ImageWrapper>
