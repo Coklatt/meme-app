@@ -3,36 +3,36 @@ import { keyframes } from 'styled-components';
 /**
  * Move element rapidly left and right
  */
-const offset = 7;
+const offset = 6;
 const shake = keyframes`
 0% {
     transform: translateX(0);
 }
-3% {
+2% {
     transform: translateX(0);
 }
-6% {
+4% {
     transform: translateX(-${offset}px);
 }
-9% {
+6% {
+    transform: translateX(0px);
+}
+8% {
+    transform: translateX(${offset}px);
+}
+10% {
     transform: translateX(0);
 }
 12% {
-    transform: translateX(${offset}px);
-}
-15% {
-    transform: translateX(0);
-}
-18% {
     transform: translateX(-${offset}px);
 }
-21% {
+14% {
     transform: translateX(0);
 }
-24% {
+16% {
     transform: translateX(${offset}px);
 }
-27% {
+18% {
     transform: translateX(0);
 }
 `;
