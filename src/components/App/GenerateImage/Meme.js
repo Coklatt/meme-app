@@ -46,7 +46,7 @@ export const Meme = ({ path, close }) => {
         <Wrapper onClick={close}>
             <InnerContainer>
                 <MemeTitle as="h4" fsize="1.5" margin="0 0 2rem">
-                    Download Here
+                    Click the image to download
                 </MemeTitle>
                 <a href={path} download="my-awesome-meme.png">
                     <Image src={path} alt="Generated Meme" />
